@@ -18,3 +18,10 @@ site/dist/
 site/src/.observablehq/cache/
 
 .DS_Store
+
+# Local caches and private notes
+data/cache/
+notes/interview_prep.md
+
+# Local tooling
+.claude/launch.json

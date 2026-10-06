@@ -13,7 +13,8 @@ Site: suliahmed.com/projects/kuairand-analysis/ (in progress)
   next-impression carryover as guardrails.
 - **Causal design:** slot-level randomisation, two-way clustered inference, a constructed user-level readout with
   CUPED, segment effects, and power/MDE.
-- **AI:** LLM content tags from video captions, validated against platform labels and hand labels.
+- **AI:** LLM content tags from video captions (vertical, format, commercial intent), checked against the
+  platform's own categories and a blind audit by a second model, with the tagging error carried into the results.
 
 Details: [`notes/01_data_profile.md`](notes/01_data_profile.md), [`notes/02_analysis_plan.md`](notes/02_analysis_plan.md).
 
@@ -54,12 +55,33 @@ Profile the data:
 python -m pipeline.profile
 ```
 
+Run the analysis. The first run builds `data/kuairand.duckdb`; results go to `site/src/data/`.
+
+```bash
+python -m pipeline
+```
+
+The LLM tags are committed in `data/derived/llm_tags.csv`, so the analysis runs without an API key. To re-tag, put
+`GEMINI_API_KEY` in `.env` (responses are cached in `data/cache/llm/`):
+
+```bash
+python -m pipeline.llm
+```
+
+Run the tests (A/A calibration, CUPED, cluster-robust SEs against statsmodels, misclassification correction):
+
+```bash
+pytest
+```
+
 ## Layout
 
 ```
 pipeline/        Python steps and SQL (pipeline/sql/)
-notes/           data profile and analysis plan
+tests/           statistical tests
+notes/           data profile, analysis plan, audit labels (notes/hand_labels/)
 data/raw/        downloaded data (gitignored)
+data/derived/    LLM tags
 site/            dashboard (Observable Framework)
 ```
 
