@@ -583,6 +583,21 @@ def variance_components(d: pd.DataFrame, metric: str = "mwt") -> dict:
     return {"total": total, "video": s_v, "user": s_u, "residual": max(total - s_v - s_u, 0.0)}
 
 
+def model_se(vc: dict, videos: float, imps_per_video: float, users: float | None = None, user_deff: float = 1.0,
+             cuped: float = 0.0) -> float:
+    """SE of a tail-vs-head difference in means with `videos` per arm and `imps_per_video` impressions each.
+
+    users=None: every user is in both arms, so user effects mostly cancel and count as impression noise.
+    Otherwise a user split with `users` split evenly: each arm's mean carries its users' effects, weighted by their
+    impressions (user_deff = mean(n^2) / mean(n)^2 over impressions per user), and CUPED removes a share `cuped` of
+    the non-video variance. The site's power calculator implements the same formula."""
+    n = videos * imps_per_video
+    if users is None:
+        return float(np.sqrt(2 * (vc["video"] / videos + (vc["user"] + vc["residual"]) / n)))
+    non_video = vc["user"] * user_deff / (users / 2) + vc["residual"] / n
+    return float(np.sqrt(2 * (vc["video"] / videos + (1 - cuped) * non_video)))
+
+
 def power(data: Data, l1: dict, l2: dict) -> dict:
     d = data.ht
     vc = variance_components(d)
@@ -592,11 +607,23 @@ def power(data: Data, l1: dict, l2: dict) -> dict:
         "imps_t": len(t), "imps_c": len(c), "users": int(d.user_id.nunique()),
         "head_mean": float(c.mwt.mean()),
     }
-    # Model SE for the impression-level design (users in both arms; user effects mostly cancel).
-    se_model = np.sqrt(vc["video"] * (1 / design["videos_t"] + 1 / design["videos_c"])
-                       + (vc["residual"] + vc["user"]) * (1 / design["imps_t"] + 1 / design["imps_c"]))
+    # Both designs at this dataset's size, arms averaged, to check the model against the measured SEs.
+    videos = (design["videos_t"] + design["videos_c"]) / 2
+    se_model = model_se(vc, videos, (design["imps_t"] + design["imps_c"]) / 2 / videos)
+    s = split_sample(d, assign_users(d.user_id.to_numpy(), SEED))
+    s = s[s.mwt.notna()]
+    arms = [s[s.treat == a] for a in (1.0, 0.0)]
+    per_user = [a.groupby("user_id").size().to_numpy() for a in arms]
+    split = {
+        "videos": float(np.mean([a.video_id.nunique() for a in arms])),
+        "users": int(sum(len(n) for n in per_user)),
+        "user_deff": float(np.mean([(n ** 2).mean() / n.mean() ** 2 for n in per_user])),
+    }
+    split["imps_per_video"] = len(s) / 2 / split["videos"]
+    split["se_model"] = model_se(vc, split["videos"], split["imps_per_video"], split["users"], split["user_deff"])
     se_obs = float(l1["main"].set_index("metric").loc["mwt", "se_abs"])
     ro = l2["readout"].set_index(["metric", "cuped"])
+    split["se_observed"] = float(ro.loc[("mwt", False), "se_abs_two_way"])
     table = []
     for name, se in [
         ("Impression level, two-way clustered", se_obs),
@@ -612,7 +639,7 @@ def power(data: Data, l1: dict, l2: dict) -> dict:
     hate = l1["main"].set_index("metric").loc["hated"]
     hate_mde = st.mde(hate.se_abs, ALPHA, POWER)
     return {
-        "components": vc, "design": design, "se_model": float(se_model), "se_observed": se_obs,
+        "components": vc, "design": design, "se_model": se_model, "se_observed": se_obs, "user_split": split,
         "table": pd.DataFrame(table),
         "hate": {"mde_abs_per_1k": 1000 * hate_mde, "head_rate_per_1k": 1000 * hate.control,
                  "mde_rel": hate_mde / hate.control},

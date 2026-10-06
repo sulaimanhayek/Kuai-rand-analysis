@@ -1932,8 +1932,16 @@
    "users": 26969,
    "head_mean": 8.53347
   },
-  "se_model": 0.154721,
+  "se_model": 0.154692,
   "se_observed": 0.153587,
+  "user_split": {
+   "videos": 1498.5,
+   "users": 26210,
+   "user_deff": 3.1579,
+   "imps_per_video": 77.5072,
+   "se_model": 0.204153,
+   "se_observed": 0.193288
+  },
   "table": [
    {
     "design": "Impression level, two-way clustered",

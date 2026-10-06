@@ -197,17 +197,25 @@ Excluded:
 
 - **Formula:** MDE at 80% power, α = 0.05 two-sided, is about 2.8 × SE.
 
-| Design | Pilot SE (MWT) | MDE | Relative to head MWT (8.31s) |
-|---|---:|---:|---:|
-| Impression level, two-way clustered | 0.146s | 0.41s | 4.9% |
-| User split, no CUPED | 0.129s | 0.36s | 4.3% |
-| User split, CUPED (5 covariates) | 0.109s | 0.31s | 3.7% |
+Final pipeline values (head MWT 8.53s):
 
-- The pipeline will export variance components (user, video, residual). The site's calculator lets the reader change
-  the number of videos, impressions per video, number of users, α, power and CUPED variance reduction, and shows MDE
-  and the sample size needed.
+| Design | SE (MWT) | MDE | Relative to head MWT |
+|---|---:|---:|---:|
+| Impression level, two-way clustered | 0.154s | 0.43s | 5.0% |
+| User split, user-clustered | 0.135s | 0.38s | 4.4% |
+| User split, user-clustered, CUPED | 0.116s | 0.33s | 3.8% |
+| User split, two-way clustered | 0.193s | 0.54s | 6.3% |
+| User split, two-way clustered, CUPED | 0.181s | 0.51s | 5.9% |
+
+- **Variance components** (random slots, MWT): video 15.6 s², user 31.3 s², residual 338.9 s².
+- **Model** (`causal.model_se`, mirrored in `site/src/components/power.js`), V videos and n impressions per arm:
+  - every user sees both arms: SE² = 2 (σ²_v / V + (σ²_u + σ²_r) / n);
+  - users split into arms: SE² = 2 (σ²_v / V + (1 − c)(σ²_u · d / (U/2) + σ²_r / n)), with c the CUPED cut and
+    d = mean(n²) / mean(n)² the design effect from unequal impressions per user (d = 3.16 here).
+- **Validation at this dataset's size:** user split 0.204s modelled vs 0.193s measured; both arms 0.155s vs 0.154s.
 - Because the video component dominates, adding videos shrinks the MDE much faster than adding impressions.
-- The hate-rate MDE will be computed and stated plainly if it's underpowered.
+- Hate rate: MDE 0.32 per 1K against a head rate of 0.94 per 1K (34% relative), so hates are underpowered and the
+  site says so.
 
 ## 8. AI component: LLM content tags from captions
 
