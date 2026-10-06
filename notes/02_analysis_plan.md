@@ -1,7 +1,33 @@
-# 02. Analysis plan (for approval)
+# 02. Analysis plan
 
-Status: **draft, waiting for approval.** Nothing in Phase 2 runs until the open decisions at the end are settled.
-Numbers come from `notes/01_data_profile.md` / `01_data_profile_tables.md`.
+Status: **approved.** The pipeline (`python -m pipeline`) implements this plan.
+Numbers below come from `notes/01_data_profile.md` / `01_data_profile_tables.md`; pipeline results are in
+`site/src/data/`.
+
+**Decisions** (section 11):
+1. Lever: tail (bottom fifth) vs head (top fifth), with variants A, B and C.
+2. Layer 1 is the primary estimate; layer 2 is the constructed user-split readout, labelled as such.
+3. MWT cap: pre-period p99.9 (373.5s); 180s is a sensitivity.
+4. Thresholds and the ship / A/B test / don't-ship rule as proposed.
+5. Audit labels: about 300 videos labelled by Claude, a different model family from the Gemini tagger, read from the
+   Chinese captions directly (no translation step). Reported as a second model's labels, not human ground truth.
+6. Licence: code MIT; derived data CC BY-SA 4.0.
+7. KuaiRand-1K not used.
+
+**Where the data refined the plan:**
+- **Tier cut-offs.** Explicit thresholds put the tail at 0 to 12 pre-period impressions and the head at 177+ (the
+  profile's `ntile` gave 13 and 179).
+- **A second cause of the SRM.** Random draws skip videos the user has already seen: 0.20% of head draws are repeats,
+  against 2.86% expected without a filter. Users have mostly seen head videos, so heavier users get fewer head draws
+  per tail draw (0.952 for the lightest fifth of users by pre-period volume, 0.897 for the heaviest). Together with
+  head videos leaving the pool early, this explains the shortfall (head at 0.954 of expected impressions overall,
+  0.972 among videos still drawn on or after 05-05). The contrast is still random within user, over videos the user
+  has not seen, which is also what a boost would serve.
+- **CUPED shifts the layer-2 estimate slightly.** Over 100 random splits the mean shift in MWT is +0.019s
+  (Monte Carlo SE 0.007), against +0.013s expected from the draw imbalance above, which CUPED corrects. The
+  "no shift" property holds when impression counts do not depend on the arm (unit test on synthetic data).
+- **CUPED pilot numbers corrected.** With the impression-level adjustment, variance falls 26% with user-clustered
+  SEs and 12% with two-way SEs (not 28%).
 
 ## 1. Product question and lever
 

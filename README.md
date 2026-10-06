@@ -54,10 +54,23 @@ Profile the data:
 python -m pipeline.profile
 ```
 
+Run the analysis. The first run builds `data/kuairand.duckdb`; results go to `site/src/data/`.
+
+```bash
+python -m pipeline
+```
+
+Run the tests (A/A calibration, CUPED, cluster-robust SEs against statsmodels):
+
+```bash
+pytest
+```
+
 ## Layout
 
 ```
 pipeline/        Python steps and SQL (pipeline/sql/)
+tests/           statistical tests
 notes/           data profile and analysis plan
 data/raw/        downloaded data (gitignored)
 site/            dashboard (Observable Framework)
