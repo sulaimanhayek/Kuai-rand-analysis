@@ -28,6 +28,22 @@ Numbers below come from `notes/01_data_profile.md` / `01_data_profile_tables.md`
   "no shift" property holds when impression counts do not depend on the arm (unit test on synthetic data).
 - **CUPED pilot numbers corrected.** With the impression-level adjustment, variance falls 26% with user-clustered
   SEs and 12% with two-way SEs (not 28%).
+- **Tagging model.** `gemini-3.1-flash-lite`. The free tier allows 20 requests a day on the Flash model, too few
+  for about 380 calls. On 40 videos tagged by both, Flash-Lite matched `gemini-3.8-flash` on 85% of verticals, 82.5%
+  of formats and all commercial flags. The taxonomy has 18 verticals plus Unclear.
+- **Audit sample.** Stratified by tier (tail 120, head 120, middle 60) and by whether the LLM and the platform agree
+  (half each), with weights N_h / n_h. Videos 0 to 80 were read while writing the prompt, so they are excluded.
+  The audit labels are made blind to the Gemini and platform labels. The audit model reads the same caption text as
+  the tagger, while the platform's categories may also use the video itself, so agreement with the audit can favour
+  the LLM over the platform.
+- **Correction method.** The audit estimates M = P(LLM label | audit label). Within each tier, class totals of
+  outcome and impressions are unmixed through M, giving corrected per-class means and class mix. M is drawn from a
+  Dirichlet posterior, combined with the two-way bootstrap. A draw of M that implies negative impressions, or a
+  class mean outside [0, cap], in either tier cannot have produced the observed data, so it is rejected and redrawn;
+  the interval comes from 400 feasible draws, and the rejection count is reported. With 300 audit videos and 18
+  classes, the corrected per-vertical effects are wide; the decomposition is not. Assumes the same tagging error in
+  both tiers and no dependence on the outcome given the true class. Verticals with fewer than 20 tail or head videos
+  are pooled.
 
 ## 1. Product question and lever
 
@@ -199,8 +215,8 @@ The profile found captions for 98.9% of pool videos, plus the platform's own mod
 LLM tagging possible, and the platform categories give a reference label for every video.
 
 **What Gemini tags.** Each caption plus cover text gets three tags:
-1. **Content vertical**, from a fixed English taxonomy of about 16 classes. The taxonomy is designed so the platform's 38
-   top-level categories map onto it.
+1. **Content vertical**, from a fixed English taxonomy of 18 verticals plus Unclear. The taxonomy is designed so the
+   platform's 38 top-level categories map onto it.
 2. **Format**: original creation / re-upload or clip of third-party media (film, TV, anime, compilations) / unclear.
 3. **Commercial intent**: promotes a product, shop or link (yes / no).
 
@@ -214,21 +230,21 @@ LLM tagging possible, and the platform categories give a reference label for eve
 **Validation.**
 - **Against platform labels (all videos):** compare the vertical to the mapped platform category. Report agreement,
   Cohen's κ, per-class precision and recall, and a confusion matrix. Caveat: the platform labels are model outputs too.
-- **Hand labels:**
-  - A stratified sample of about 300 videos (by class × tier, oversampling LLM and platform disagreements),
-    exported to `notes/hand_labels/sample.csv`.
-  - You fill in the label columns; the pipeline reads them back.
+- **Audit labels** (decision 5):
+  - A stratified sample of 300 videos (by tier × LLM-platform agreement), exported to `notes/hand_labels/sample.csv`.
+  - Labelled by a second model, blind to the Gemini and platform labels; the pipeline reads them back.
   - Reported: κ for all three tags, and an error breakdown by class, caption length, hashtag-only captions and
     repaired rows.
 - **Propagation.** Recompute the within-content tail penalty and the per-vertical effects three ways:
   - with LLM tags;
   - with platform labels;
-  - with a misclassification correction based on the hand-label confusion matrix (bootstrap).
+  - with a misclassification correction based on the audit confusion matrix (see the correction method above).
   Report how far the headline moves.
 
 **Engineering.**
 - Key from `GEMINI_API_KEY`, never committed (`.env` is gitignored).
-- A pinned Flash-tier model at temperature 0, with JSON-schema output (enums), about 20 captions per call (about 380 calls).
+- A pinned model (`gemini-3.1-flash-lite`) at temperature 0, with JSON-schema output (enums), 20 captions per call
+  (376 calls).
 - Every call is cached on disk, keyed by a hash of model, prompt version and input.
 - The resulting tag table (7,583 rows) is committed as derived data, so the pipeline runs without a key.
 
@@ -256,6 +272,7 @@ tests/
   test_aa.py     user-split A/A and video-split A/A (calibrates the two-way SEs): false-positive rate within
                  binomial bounds of 5%, p-values uniform
   test_cuped.py  no mean shift across splits; variance reduced; synthetic known-effect case
+  test_tags.py   kappa against statsmodels; the correction recovers known class effects
 ```
 
 - Report every estimate with an absolute and a relative delta, a 95% CI (analytic, delta method or cluster-robust;
@@ -267,9 +284,7 @@ tests/
 2. **Design:** layer 1 impression-level as the primary estimate; layer 2 constructed user split as the readout, clearly labelled.
 3. **MWT cap:** pre-period p99.9 (373.5s, recommended) or 180s.
 4. **Thresholds:** -1.0% MWT, +1.0 pp early skip, +5% hates, and the ship / A/B test / don't-ship rule.
-5. **AI component:** Gemini tags (vertical, format, commercial) validated against platform labels and hand labels.
-   The captions are in Chinese. Are you able to hand-label from Chinese text, or should the hand-label sheet include a
-   translation? A translation from the same LLM would bias the check, so I'd suggest a separate translation step,
-   and the bias would be noted.
+5. **AI component:** Gemini tags (vertical, format, commercial) validated against platform labels and audit labels.
+   Resolved by decision 5: a second model labels from the Chinese text directly, with no translation step.
 6. **Licence:** code MIT; derived data CC BY-SA 4.0 (inherited).
 7. **KuaiRand-1K:** not needed now. Only worth it if a full-session view of the random-vs-recommended comparison becomes essential.

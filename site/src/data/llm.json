@@ -1,0 +1,3011 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "distribution": {
+  "videos": 7583,
+  "tagged": 7518,
+  "no_text": 65,
+  "vertical": [
+   {
+    "level": "Anime and comics",
+    "n": 473,
+    "share": 0.0629157,
+    "share_tail": 0.0924703,
+    "share_head": 0.0255205
+   },
+   {
+    "level": "Arts and photography",
+    "n": 296,
+    "share": 0.0393722,
+    "share_tail": 0.0587847,
+    "share_head": 0.0282069
+   },
+   {
+    "level": "Beauty, fashion and looks",
+    "n": 418,
+    "share": 0.0555999,
+    "share_tail": 0.0416116,
+    "share_head": 0.0503694
+   },
+   {
+    "level": "Celebrity and entertainment",
+    "n": 250,
+    "share": 0.0332535,
+    "share_tail": 0.0290621,
+    "share_head": 0.0429819
+   },
+   {
+    "level": "Comedy",
+    "n": 524,
+    "share": 0.0696994,
+    "share_tail": 0.0449141,
+    "share_head": 0.111484
+   },
+   {
+    "level": "Dance",
+    "n": 202,
+    "share": 0.0268688,
+    "share_tail": 0.0462351,
+    "share_head": 0.018133
+   },
+   {
+    "level": "Everyday life and travel",
+    "n": 512,
+    "share": 0.0681032,
+    "share_tail": 0.0495376,
+    "share_head": 0.0745467
+   },
+   {
+    "level": "Family and relationships",
+    "n": 437,
+    "share": 0.0581272,
+    "share_tail": 0.0383091,
+    "share_head": 0.0745467
+   },
+   {
+    "level": "Film and TV",
+    "n": 898,
+    "share": 0.119447,
+    "share_tail": 0.107662,
+    "share_head": 0.143721
+   },
+   {
+    "level": "Food",
+    "n": 538,
+    "share": 0.0715616,
+    "share_tail": 0.0719947,
+    "share_head": 0.0745467
+   },
+   {
+    "level": "Gaming",
+    "n": 689,
+    "share": 0.0916467,
+    "share_tail": 0.0997358,
+    "share_head": 0.0651444
+   },
+   {
+    "level": "Knowledge and tech",
+    "n": 525,
+    "share": 0.0698324,
+    "share_tail": 0.0845443,
+    "share_head": 0.0557421
+   },
+   {
+    "level": "Music",
+    "n": 295,
+    "share": 0.0392392,
+    "share_tail": 0.0521797,
+    "share_head": 0.0241773
+   },
+   {
+    "level": "News and society",
+    "n": 168,
+    "share": 0.0223464,
+    "share_tail": 0.0204756,
+    "share_head": 0.0241773
+   },
+   {
+    "level": "Other",
+    "n": 111,
+    "share": 0.0147646,
+    "share_tail": 0.0178336,
+    "share_head": 0.0167898
+   },
+   {
+    "level": "Pets and animals",
+    "n": 211,
+    "share": 0.028066,
+    "share_tail": 0.0217966,
+    "share_head": 0.0396239
+   },
+   {
+    "level": "Short drama",
+    "n": 405,
+    "share": 0.0538707,
+    "share_tail": 0.0455746,
+    "share_head": 0.0671592
+   },
+   {
+    "level": "Sports and fitness",
+    "n": 386,
+    "share": 0.0513434,
+    "share_tail": 0.0601057,
+    "share_head": 0.0342512
+   },
+   {
+    "level": "Unclear",
+    "n": 180,
+    "share": 0.0239425,
+    "share_tail": 0.0171731,
+    "share_head": 0.0288784
+   }
+  ],
+  "format": [
+   {
+    "level": "clip_or_reupload",
+    "n": 2207,
+    "share": 0.293562,
+    "share_tail": 0.310436,
+    "share_head": 0.288113
+   },
+   {
+    "level": "original",
+    "n": 5081,
+    "share": 0.675845,
+    "share_tail": 0.662483,
+    "share_head": 0.676293
+   },
+   {
+    "level": "unclear",
+    "n": 230,
+    "share": 0.0305932,
+    "share_tail": 0.0270806,
+    "share_head": 0.0355944
+   }
+  ],
+  "commercial": [
+   {
+    "level": "False",
+    "n": 7356,
+    "share": 0.978452,
+    "share_tail": 0.97358,
+    "share_head": 0.982539
+   },
+   {
+    "level": "True",
+    "n": 162,
+    "share": 0.0215483,
+    "share_tail": 0.0264201,
+    "share_head": 0.0174614
+   }
+  ]
+ },
+ "platform_agreement": {
+  "n": 7506,
+  "agreement": 0.652678,
+  "kappa": 0.627372,
+  "unclear_share": 0.0238476,
+  "agreement_excluding_unclear": 0.668623,
+  "by_tier": {
+   "head": 0.574311,
+   "mid": 0.664004,
+   "tail": 0.695968
+  },
+  "per_class": [
+   {
+    "vertical": "Film and TV",
+    "n_llm": 897,
+    "n_platform": 1198,
+    "n_both": 774,
+    "precision": 0.862876,
+    "recall": 0.646077
+   },
+   {
+    "vertical": "Short drama",
+    "n_llm": 405,
+    "n_platform": 298,
+    "n_both": 100,
+    "precision": 0.246914,
+    "recall": 0.33557
+   },
+   {
+    "vertical": "Anime and comics",
+    "n_llm": 473,
+    "n_platform": 741,
+    "n_both": 412,
+    "precision": 0.871036,
+    "recall": 0.556005
+   },
+   {
+    "vertical": "Gaming",
+    "n_llm": 689,
+    "n_platform": 733,
+    "n_both": 634,
+    "precision": 0.920174,
+    "recall": 0.864939
+   },
+   {
+    "vertical": "Food",
+    "n_llm": 538,
+    "n_platform": 514,
+    "n_both": 461,
+    "precision": 0.856877,
+    "recall": 0.896887
+   },
+   {
+    "vertical": "Sports and fitness",
+    "n_llm": 386,
+    "n_platform": 380,
+    "n_both": 345,
+    "precision": 0.893782,
+    "recall": 0.907895
+   },
+   {
+    "vertical": "Comedy",
+    "n_llm": 523,
+    "n_platform": 343,
+    "n_both": 224,
+    "precision": 0.428298,
+    "recall": 0.653061
+   },
+   {
+    "vertical": "Music",
+    "n_llm": 294,
+    "n_platform": 312,
+    "n_both": 229,
+    "precision": 0.778912,
+    "recall": 0.733974
+   },
+   {
+    "vertical": "Dance",
+    "n_llm": 202,
+    "n_platform": 244,
+    "n_both": 171,
+    "precision": 0.846535,
+    "recall": 0.70082
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "n_llm": 250,
+    "n_platform": 237,
+    "n_both": 138,
+    "precision": 0.552,
+    "recall": 0.582278
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "n_llm": 418,
+    "n_platform": 556,
+    "n_both": 315,
+    "precision": 0.753589,
+    "recall": 0.566547
+   },
+   {
+    "vertical": "Pets and animals",
+    "n_llm": 211,
+    "n_platform": 186,
+    "n_both": 148,
+    "precision": 0.701422,
+    "recall": 0.795699
+   },
+   {
+    "vertical": "Family and relationships",
+    "n_llm": 437,
+    "n_platform": 220,
+    "n_both": 139,
+    "precision": 0.318078,
+    "recall": 0.631818
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "n_llm": 508,
+    "n_platform": 407,
+    "n_both": 213,
+    "precision": 0.419291,
+    "recall": 0.523342
+   },
+   {
+    "vertical": "News and society",
+    "n_llm": 167,
+    "n_platform": 252,
+    "n_both": 120,
+    "precision": 0.718563,
+    "recall": 0.47619
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "n_llm": 523,
+    "n_platform": 492,
+    "n_both": 284,
+    "precision": 0.543021,
+    "recall": 0.577236
+   },
+   {
+    "vertical": "Arts and photography",
+    "n_llm": 296,
+    "n_platform": 297,
+    "n_both": 180,
+    "precision": 0.608108,
+    "recall": 0.606061
+   },
+   {
+    "vertical": "Other",
+    "n_llm": 110,
+    "n_platform": 96,
+    "n_both": 12,
+    "precision": 0.109091,
+    "recall": 0.125
+   }
+  ],
+  "confusion": [
+   {
+    "vertical": "Anime and comics",
+    "platform": "Anime and comics",
+    "n": 412
+   },
+   {
+    "vertical": "Anime and comics",
+    "platform": "Arts and photography",
+    "n": 2
+   },
+   {
+    "vertical": "Anime and comics",
+    "platform": "Celebrity and entertainment",
+    "n": 1
+   },
+   {
+    "vertical": "Anime and comics",
+    "platform": "Comedy",
+    "n": 3
+   },
+   {
+    "vertical": "Anime and comics",
+    "platform": "Family and relationships",
+    "n": 2
+   },
+   {
+    "vertical": "Anime and comics",
+    "platform": "Film and TV",
+    "n": 10
+   },
+   {
+    "vertical": "Anime and comics",
+    "platform": "Gaming",
+    "n": 6
+   },
+   {
+    "vertical": "Anime and comics",
+    "platform": "Knowledge and tech",
+    "n": 34
+   },
+   {
+    "vertical": "Anime and comics",
+    "platform": "News and society",
+    "n": 1
+   },
+   {
+    "vertical": "Anime and comics",
+    "platform": "Other",
+    "n": 2
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Anime and comics",
+    "n": 37
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Arts and photography",
+    "n": 180
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Beauty, fashion and looks",
+    "n": 18
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Celebrity and entertainment",
+    "n": 2
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Dance",
+    "n": 1
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Everyday life and travel",
+    "n": 15
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Family and relationships",
+    "n": 9
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Food",
+    "n": 1
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Gaming",
+    "n": 2
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Knowledge and tech",
+    "n": 19
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Music",
+    "n": 4
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Other",
+    "n": 3
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Pets and animals",
+    "n": 1
+   },
+   {
+    "vertical": "Arts and photography",
+    "platform": "Short drama",
+    "n": 4
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Anime and comics",
+    "n": 25
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Arts and photography",
+    "n": 10
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Beauty, fashion and looks",
+    "n": 315
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Celebrity and entertainment",
+    "n": 11
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Comedy",
+    "n": 4
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Dance",
+    "n": 5
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Everyday life and travel",
+    "n": 14
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Family and relationships",
+    "n": 11
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Knowledge and tech",
+    "n": 9
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Other",
+    "n": 7
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Short drama",
+    "n": 5
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "platform": "Sports and fitness",
+    "n": 2
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Anime and comics",
+    "n": 2
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Arts and photography",
+    "n": 1
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Beauty, fashion and looks",
+    "n": 15
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Celebrity and entertainment",
+    "n": 138
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Comedy",
+    "n": 6
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Dance",
+    "n": 3
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Everyday life and travel",
+    "n": 1
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Film and TV",
+    "n": 64
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Knowledge and tech",
+    "n": 3
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Music",
+    "n": 8
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "News and society",
+    "n": 5
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Other",
+    "n": 1
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "platform": "Sports and fitness",
+    "n": 3
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Anime and comics",
+    "n": 48
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Arts and photography",
+    "n": 3
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Beauty, fashion and looks",
+    "n": 32
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Celebrity and entertainment",
+    "n": 9
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Comedy",
+    "n": 224
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Dance",
+    "n": 10
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Everyday life and travel",
+    "n": 15
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Family and relationships",
+    "n": 12
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Film and TV",
+    "n": 23
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Food",
+    "n": 4
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Gaming",
+    "n": 22
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Knowledge and tech",
+    "n": 11
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Music",
+    "n": 6
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "News and society",
+    "n": 5
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Other",
+    "n": 3
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Pets and animals",
+    "n": 18
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Short drama",
+    "n": 74
+   },
+   {
+    "vertical": "Comedy",
+    "platform": "Sports and fitness",
+    "n": 4
+   },
+   {
+    "vertical": "Dance",
+    "platform": "Anime and comics",
+    "n": 9
+   },
+   {
+    "vertical": "Dance",
+    "platform": "Beauty, fashion and looks",
+    "n": 7
+   },
+   {
+    "vertical": "Dance",
+    "platform": "Celebrity and entertainment",
+    "n": 4
+   },
+   {
+    "vertical": "Dance",
+    "platform": "Dance",
+    "n": 171
+   },
+   {
+    "vertical": "Dance",
+    "platform": "Everyday life and travel",
+    "n": 3
+   },
+   {
+    "vertical": "Dance",
+    "platform": "Family and relationships",
+    "n": 1
+   },
+   {
+    "vertical": "Dance",
+    "platform": "Film and TV",
+    "n": 1
+   },
+   {
+    "vertical": "Dance",
+    "platform": "News and society",
+    "n": 3
+   },
+   {
+    "vertical": "Dance",
+    "platform": "Short drama",
+    "n": 2
+   },
+   {
+    "vertical": "Dance",
+    "platform": "Sports and fitness",
+    "n": 1
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Anime and comics",
+    "n": 16
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Arts and photography",
+    "n": 32
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Beauty, fashion and looks",
+    "n": 48
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Celebrity and entertainment",
+    "n": 7
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Comedy",
+    "n": 17
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Dance",
+    "n": 7
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Everyday life and travel",
+    "n": 213
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Family and relationships",
+    "n": 12
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Film and TV",
+    "n": 3
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Food",
+    "n": 34
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Gaming",
+    "n": 7
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Knowledge and tech",
+    "n": 29
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Music",
+    "n": 19
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "News and society",
+    "n": 15
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Other",
+    "n": 8
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Pets and animals",
+    "n": 1
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Short drama",
+    "n": 33
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "platform": "Sports and fitness",
+    "n": 7
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Anime and comics",
+    "n": 23
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Arts and photography",
+    "n": 10
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Beauty, fashion and looks",
+    "n": 35
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Celebrity and entertainment",
+    "n": 8
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Comedy",
+    "n": 39
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Dance",
+    "n": 10
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Everyday life and travel",
+    "n": 28
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Family and relationships",
+    "n": 139
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Film and TV",
+    "n": 22
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Food",
+    "n": 6
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Gaming",
+    "n": 5
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Knowledge and tech",
+    "n": 16
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Music",
+    "n": 16
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "News and society",
+    "n": 17
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Other",
+    "n": 6
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Pets and animals",
+    "n": 3
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Short drama",
+    "n": 52
+   },
+   {
+    "vertical": "Family and relationships",
+    "platform": "Sports and fitness",
+    "n": 2
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Anime and comics",
+    "n": 32
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Arts and photography",
+    "n": 1
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Beauty, fashion and looks",
+    "n": 4
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Celebrity and entertainment",
+    "n": 27
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Comedy",
+    "n": 6
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Everyday life and travel",
+    "n": 2
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Family and relationships",
+    "n": 4
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Film and TV",
+    "n": 774
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Food",
+    "n": 1
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Gaming",
+    "n": 5
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Knowledge and tech",
+    "n": 18
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Music",
+    "n": 4
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "News and society",
+    "n": 5
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Other",
+    "n": 3
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Pets and animals",
+    "n": 2
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Short drama",
+    "n": 6
+   },
+   {
+    "vertical": "Film and TV",
+    "platform": "Sports and fitness",
+    "n": 3
+   },
+   {
+    "vertical": "Food",
+    "platform": "Anime and comics",
+    "n": 4
+   },
+   {
+    "vertical": "Food",
+    "platform": "Arts and photography",
+    "n": 7
+   },
+   {
+    "vertical": "Food",
+    "platform": "Beauty, fashion and looks",
+    "n": 2
+   },
+   {
+    "vertical": "Food",
+    "platform": "Comedy",
+    "n": 4
+   },
+   {
+    "vertical": "Food",
+    "platform": "Everyday life and travel",
+    "n": 39
+   },
+   {
+    "vertical": "Food",
+    "platform": "Family and relationships",
+    "n": 4
+   },
+   {
+    "vertical": "Food",
+    "platform": "Film and TV",
+    "n": 3
+   },
+   {
+    "vertical": "Food",
+    "platform": "Food",
+    "n": 461
+   },
+   {
+    "vertical": "Food",
+    "platform": "Gaming",
+    "n": 1
+   },
+   {
+    "vertical": "Food",
+    "platform": "Knowledge and tech",
+    "n": 4
+   },
+   {
+    "vertical": "Food",
+    "platform": "News and society",
+    "n": 3
+   },
+   {
+    "vertical": "Food",
+    "platform": "Other",
+    "n": 1
+   },
+   {
+    "vertical": "Food",
+    "platform": "Pets and animals",
+    "n": 1
+   },
+   {
+    "vertical": "Food",
+    "platform": "Short drama",
+    "n": 4
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Anime and comics",
+    "n": 27
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Arts and photography",
+    "n": 2
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Beauty, fashion and looks",
+    "n": 3
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Comedy",
+    "n": 5
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Everyday life and travel",
+    "n": 3
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Film and TV",
+    "n": 5
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Gaming",
+    "n": 634
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Knowledge and tech",
+    "n": 2
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "News and society",
+    "n": 2
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Other",
+    "n": 1
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Pets and animals",
+    "n": 1
+   },
+   {
+    "vertical": "Gaming",
+    "platform": "Sports and fitness",
+    "n": 4
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Anime and comics",
+    "n": 10
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Arts and photography",
+    "n": 21
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Beauty, fashion and looks",
+    "n": 11
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Celebrity and entertainment",
+    "n": 1
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Comedy",
+    "n": 3
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Dance",
+    "n": 4
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Everyday life and travel",
+    "n": 52
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Family and relationships",
+    "n": 10
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Film and TV",
+    "n": 18
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Food",
+    "n": 5
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Gaming",
+    "n": 8
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Knowledge and tech",
+    "n": 284
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Music",
+    "n": 2
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "News and society",
+    "n": 48
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Other",
+    "n": 36
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Pets and animals",
+    "n": 5
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Short drama",
+    "n": 2
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "platform": "Sports and fitness",
+    "n": 3
+   },
+   {
+    "vertical": "Music",
+    "platform": "Anime and comics",
+    "n": 4
+   },
+   {
+    "vertical": "Music",
+    "platform": "Arts and photography",
+    "n": 3
+   },
+   {
+    "vertical": "Music",
+    "platform": "Beauty, fashion and looks",
+    "n": 15
+   },
+   {
+    "vertical": "Music",
+    "platform": "Celebrity and entertainment",
+    "n": 12
+   },
+   {
+    "vertical": "Music",
+    "platform": "Comedy",
+    "n": 2
+   },
+   {
+    "vertical": "Music",
+    "platform": "Dance",
+    "n": 15
+   },
+   {
+    "vertical": "Music",
+    "platform": "Everyday life and travel",
+    "n": 1
+   },
+   {
+    "vertical": "Music",
+    "platform": "Family and relationships",
+    "n": 1
+   },
+   {
+    "vertical": "Music",
+    "platform": "Film and TV",
+    "n": 4
+   },
+   {
+    "vertical": "Music",
+    "platform": "Gaming",
+    "n": 3
+   },
+   {
+    "vertical": "Music",
+    "platform": "Music",
+    "n": 229
+   },
+   {
+    "vertical": "Music",
+    "platform": "News and society",
+    "n": 2
+   },
+   {
+    "vertical": "Music",
+    "platform": "Other",
+    "n": 1
+   },
+   {
+    "vertical": "Music",
+    "platform": "Short drama",
+    "n": 1
+   },
+   {
+    "vertical": "Music",
+    "platform": "Sports and fitness",
+    "n": 1
+   },
+   {
+    "vertical": "News and society",
+    "platform": "Arts and photography",
+    "n": 3
+   },
+   {
+    "vertical": "News and society",
+    "platform": "Beauty, fashion and looks",
+    "n": 3
+   },
+   {
+    "vertical": "News and society",
+    "platform": "Comedy",
+    "n": 1
+   },
+   {
+    "vertical": "News and society",
+    "platform": "Dance",
+    "n": 4
+   },
+   {
+    "vertical": "News and society",
+    "platform": "Everyday life and travel",
+    "n": 6
+   },
+   {
+    "vertical": "News and society",
+    "platform": "Film and TV",
+    "n": 8
+   },
+   {
+    "vertical": "News and society",
+    "platform": "Food",
+    "n": 1
+   },
+   {
+    "vertical": "News and society",
+    "platform": "Knowledge and tech",
+    "n": 18
+   },
+   {
+    "vertical": "News and society",
+    "platform": "News and society",
+    "n": 120
+   },
+   {
+    "vertical": "News and society",
+    "platform": "Other",
+    "n": 2
+   },
+   {
+    "vertical": "News and society",
+    "platform": "Short drama",
+    "n": 1
+   },
+   {
+    "vertical": "Other",
+    "platform": "Anime and comics",
+    "n": 31
+   },
+   {
+    "vertical": "Other",
+    "platform": "Arts and photography",
+    "n": 7
+   },
+   {
+    "vertical": "Other",
+    "platform": "Beauty, fashion and looks",
+    "n": 6
+   },
+   {
+    "vertical": "Other",
+    "platform": "Celebrity and entertainment",
+    "n": 2
+   },
+   {
+    "vertical": "Other",
+    "platform": "Comedy",
+    "n": 4
+   },
+   {
+    "vertical": "Other",
+    "platform": "Dance",
+    "n": 4
+   },
+   {
+    "vertical": "Other",
+    "platform": "Everyday life and travel",
+    "n": 3
+   },
+   {
+    "vertical": "Other",
+    "platform": "Family and relationships",
+    "n": 5
+   },
+   {
+    "vertical": "Other",
+    "platform": "Film and TV",
+    "n": 6
+   },
+   {
+    "vertical": "Other",
+    "platform": "Gaming",
+    "n": 7
+   },
+   {
+    "vertical": "Other",
+    "platform": "Knowledge and tech",
+    "n": 10
+   },
+   {
+    "vertical": "Other",
+    "platform": "Music",
+    "n": 8
+   },
+   {
+    "vertical": "Other",
+    "platform": "News and society",
+    "n": 1
+   },
+   {
+    "vertical": "Other",
+    "platform": "Other",
+    "n": 12
+   },
+   {
+    "vertical": "Other",
+    "platform": "Pets and animals",
+    "n": 1
+   },
+   {
+    "vertical": "Other",
+    "platform": "Short drama",
+    "n": 2
+   },
+   {
+    "vertical": "Other",
+    "platform": "Sports and fitness",
+    "n": 1
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "Anime and comics",
+    "n": 5
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "Beauty, fashion and looks",
+    "n": 5
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "Comedy",
+    "n": 4
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "Everyday life and travel",
+    "n": 6
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "Family and relationships",
+    "n": 1
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "Film and TV",
+    "n": 4
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "Gaming",
+    "n": 3
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "Knowledge and tech",
+    "n": 17
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "News and society",
+    "n": 10
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "Other",
+    "n": 8
+   },
+   {
+    "vertical": "Pets and animals",
+    "platform": "Pets and animals",
+    "n": 148
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Anime and comics",
+    "n": 33
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Arts and photography",
+    "n": 5
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Beauty, fashion and looks",
+    "n": 2
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Celebrity and entertainment",
+    "n": 5
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Comedy",
+    "n": 4
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Everyday life and travel",
+    "n": 2
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Family and relationships",
+    "n": 4
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Film and TV",
+    "n": 227
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Gaming",
+    "n": 11
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Knowledge and tech",
+    "n": 8
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "News and society",
+    "n": 3
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Pets and animals",
+    "n": 1
+   },
+   {
+    "vertical": "Short drama",
+    "platform": "Short drama",
+    "n": 100
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Anime and comics",
+    "n": 4
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Beauty, fashion and looks",
+    "n": 10
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Celebrity and entertainment",
+    "n": 2
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Comedy",
+    "n": 2
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Dance",
+    "n": 2
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Everyday life and travel",
+    "n": 2
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Gaming",
+    "n": 2
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Knowledge and tech",
+    "n": 7
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Music",
+    "n": 1
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "News and society",
+    "n": 7
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Short drama",
+    "n": 2
+   },
+   {
+    "vertical": "Sports and fitness",
+    "platform": "Sports and fitness",
+    "n": 345
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Anime and comics",
+    "n": 19
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Arts and photography",
+    "n": 10
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Beauty, fashion and looks",
+    "n": 25
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Celebrity and entertainment",
+    "n": 8
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Comedy",
+    "n": 15
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Dance",
+    "n": 8
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Everyday life and travel",
+    "n": 2
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Family and relationships",
+    "n": 5
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Film and TV",
+    "n": 26
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Food",
+    "n": 1
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Gaming",
+    "n": 17
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Knowledge and tech",
+    "n": 3
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Music",
+    "n": 15
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "News and society",
+    "n": 5
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Other",
+    "n": 2
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Pets and animals",
+    "n": 4
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Short drama",
+    "n": 10
+   },
+   {
+    "vertical": "Unclear",
+    "platform": "Sports and fitness",
+    "n": 4
+   }
+  ]
+ },
+ "audit": {
+  "n": 300,
+  "strata": [
+   {
+    "stratum": "head|agree",
+    "n": 60,
+    "weight": 14.15
+   },
+   {
+    "stratum": "head|disagree",
+    "n": 60,
+    "weight": 10.4
+   },
+   {
+    "stratum": "mid|agree",
+    "n": 30,
+    "weight": 98.6333
+   },
+   {
+    "stratum": "mid|disagree",
+    "n": 30,
+    "weight": 50.2667
+   },
+   {
+    "stratum": "tail|agree",
+    "n": 60,
+    "weight": 17.3833
+   },
+   {
+    "stratum": "tail|disagree",
+    "n": 60,
+    "weight": 7.58333
+   }
+  ],
+  "stats": [
+   {
+    "comparison": "vertical: LLM vs audit",
+    "quantity": "agreement",
+    "estimate": 0.849787,
+    "lo": 0.811333,
+    "hi": 0.888859
+   },
+   {
+    "comparison": "vertical: LLM vs audit",
+    "quantity": "kappa",
+    "estimate": 0.839069,
+    "lo": 0.796464,
+    "hi": 0.879964
+   },
+   {
+    "comparison": "vertical: platform vs audit",
+    "quantity": "agreement",
+    "estimate": 0.718441,
+    "lo": 0.688128,
+    "hi": 0.752868
+   },
+   {
+    "comparison": "vertical: platform vs audit",
+    "quantity": "kappa",
+    "estimate": 0.696687,
+    "lo": 0.662224,
+    "hi": 0.732292
+   },
+   {
+    "comparison": "vertical: LLM vs platform",
+    "quantity": "agreement",
+    "estimate": 0.652191,
+    "lo": 0.652191,
+    "hi": 0.652191
+   },
+   {
+    "comparison": "vertical: LLM vs platform",
+    "quantity": "kappa",
+    "estimate": 0.625998,
+    "lo": 0.618475,
+    "hi": 0.628003
+   },
+   {
+    "comparison": "format: LLM vs audit",
+    "quantity": "agreement",
+    "estimate": 0.753133,
+    "lo": 0.68473,
+    "hi": 0.818171
+   },
+   {
+    "comparison": "format: LLM vs audit",
+    "quantity": "kappa",
+    "estimate": 0.560243,
+    "lo": 0.435527,
+    "hi": 0.664854
+   },
+   {
+    "comparison": "commercial: LLM vs audit",
+    "quantity": "agreement",
+    "estimate": 0.997961,
+    "lo": 0.994902,
+    "hi": 1.0
+   },
+   {
+    "comparison": "commercial: LLM vs audit",
+    "quantity": "kappa",
+    "estimate": 0.946781,
+    "lo": 0.499234,
+    "hi": 1.0
+   },
+   {
+    "comparison": "commercial: audit share",
+    "quantity": "share",
+    "estimate": 0.0195393,
+    "lo": 0.00203908,
+    "hi": 0.0497369
+   },
+   {
+    "comparison": "commercial: LLM share",
+    "quantity": "share",
+    "estimate": 0.0195393,
+    "lo": 0.00203908,
+    "hi": 0.04973
+   }
+  ],
+  "errors": [
+   {
+    "by": "LLM vertical",
+    "level": "Anime and comics",
+    "n": 16,
+    "weight_share": 0.0701421,
+    "vertical_error": 0.129668,
+    "format_error": 0.412484,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Arts and photography",
+    "n": 12,
+    "weight_share": 0.03669,
+    "vertical_error": 0.027788,
+    "format_error": 0.0658972,
+    "commercial_error": 0.027788
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Beauty, fashion and looks",
+    "n": 14,
+    "weight_share": 0.0522318,
+    "vertical_error": 0.0462891,
+    "format_error": 0.156156,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Celebrity and entertainment",
+    "n": 12,
+    "weight_share": 0.0401721,
+    "vertical_error": 0.0507586,
+    "format_error": 0.25039,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Comedy",
+    "n": 25,
+    "weight_share": 0.0654029,
+    "vertical_error": 0.116692,
+    "format_error": 0.402905,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Dance",
+    "n": 8,
+    "weight_share": 0.0269293,
+    "vertical_error": 0.0,
+    "format_error": 0.0,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Everyday life and travel",
+    "n": 21,
+    "weight_share": 0.0645402,
+    "vertical_error": 0.343471,
+    "format_error": 0.336354,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Family and relationships",
+    "n": 20,
+    "weight_share": 0.0613202,
+    "vertical_error": 0.101659,
+    "format_error": 0.245122,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Film and TV",
+    "n": 33,
+    "weight_share": 0.123743,
+    "vertical_error": 0.0741525,
+    "format_error": 0.0546139,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Food",
+    "n": 19,
+    "weight_share": 0.063552,
+    "vertical_error": 0.122382,
+    "format_error": 0.0160426,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Gaming",
+    "n": 21,
+    "weight_share": 0.097515,
+    "vertical_error": 0.0,
+    "format_error": 0.213884,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Knowledge and tech",
+    "n": 22,
+    "weight_share": 0.0613202,
+    "vertical_error": 0.245122,
+    "format_error": 0.395491,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Music",
+    "n": 13,
+    "weight_share": 0.0508896,
+    "vertical_error": 0.198758,
+    "format_error": 0.372463,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "News and society",
+    "n": 5,
+    "weight_share": 0.00855965,
+    "vertical_error": 0.11911,
+    "format_error": 0.88089,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Other",
+    "n": 8,
+    "weight_share": 0.0268934,
+    "vertical_error": 0.341193,
+    "format_error": 0.545076,
+    "commercial_error": 0.0379103
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Pets and animals",
+    "n": 8,
+    "weight_share": 0.0186184,
+    "vertical_error": 0.0,
+    "format_error": 0.519918,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Short drama",
+    "n": 22,
+    "weight_share": 0.0576208,
+    "vertical_error": 0.686136,
+    "format_error": 0.207778,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Sports and fitness",
+    "n": 11,
+    "weight_share": 0.0506722,
+    "vertical_error": 0.133369,
+    "format_error": 0.345361,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "LLM vertical",
+    "level": "Unclear",
+    "n": 10,
+    "weight_share": 0.0231872,
+    "vertical_error": 0.0439698,
+    "format_error": 0.0439698,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "Caption length",
+    "level": "No caption",
+    "n": 1,
+    "weight_share": 0.00190239,
+    "vertical_error": 0.0,
+    "format_error": 1.0,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "Caption length",
+    "level": "Up to 20 characters",
+    "n": 46,
+    "weight_share": 0.153451,
+    "vertical_error": 0.311746,
+    "format_error": 0.392527,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "Caption length",
+    "level": "21 to 50 characters",
+    "n": 187,
+    "weight_share": 0.603522,
+    "vertical_error": 0.106004,
+    "format_error": 0.204667,
+    "commercial_error": 0.00337863
+   },
+   {
+    "by": "Caption length",
+    "level": "Over 50 characters",
+    "n": 66,
+    "weight_share": 0.241124,
+    "vertical_error": 0.159252,
+    "format_error": 0.253854,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "Hashtags and mentions only",
+    "level": "Yes",
+    "n": 249,
+    "weight_share": 0.806843,
+    "vertical_error": 0.150892,
+    "format_error": 0.249038,
+    "commercial_error": 0.00252723
+   },
+   {
+    "by": "Hashtags and mentions only",
+    "level": "No",
+    "n": 51,
+    "weight_share": 0.193157,
+    "vertical_error": 0.147375,
+    "format_error": 0.237802,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "Repaired caption row",
+    "level": "Yes",
+    "n": 2,
+    "weight_share": 0.0142803,
+    "vertical_error": 0.0,
+    "format_error": 0.0713949,
+    "commercial_error": 0.0
+   },
+   {
+    "by": "Repaired caption row",
+    "level": "No",
+    "n": 298,
+    "weight_share": 0.98572,
+    "vertical_error": 0.152389,
+    "format_error": 0.24941,
+    "commercial_error": 0.00206862
+   }
+  ],
+  "confusion": [
+   {
+    "vertical": "Anime and comics",
+    "audit_vertical": "Anime and comics",
+    "n": 14,
+    "weight": 0.0610469
+   },
+   {
+    "vertical": "Anime and comics",
+    "audit_vertical": "Knowledge and tech",
+    "n": 1,
+    "weight": 0.00675809
+   },
+   {
+    "vertical": "Anime and comics",
+    "audit_vertical": "Other",
+    "n": 1,
+    "weight": 0.0023371
+   },
+   {
+    "vertical": "Arts and photography",
+    "audit_vertical": "Anime and comics",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Arts and photography",
+    "audit_vertical": "Arts and photography",
+    "n": 11,
+    "weight": 0.0356704
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "audit_vertical": "Beauty, fashion and looks",
+    "n": 12,
+    "weight": 0.049814
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "audit_vertical": "Family and relationships",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "audit_vertical": "Food",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "audit_vertical": "Celebrity and entertainment",
+    "n": 10,
+    "weight": 0.038133
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "audit_vertical": "Film and TV",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "audit_vertical": "Sports and fitness",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Comedy",
+    "audit_vertical": "Anime and comics",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Comedy",
+    "audit_vertical": "Comedy",
+    "n": 19,
+    "weight": 0.0577709
+   },
+   {
+    "vertical": "Comedy",
+    "audit_vertical": "Family and relationships",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Comedy",
+    "audit_vertical": "Film and TV",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Comedy",
+    "audit_vertical": "Unclear",
+    "n": 3,
+    "weight": 0.00381599
+   },
+   {
+    "vertical": "Dance",
+    "audit_vertical": "Dance",
+    "n": 8,
+    "weight": 0.0269293
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "audit_vertical": "Arts and photography",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "audit_vertical": "Comedy",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "audit_vertical": "Everyday life and travel",
+    "n": 12,
+    "weight": 0.0423725
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "audit_vertical": "Knowledge and tech",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "audit_vertical": "Unclear",
+    "n": 6,
+    "weight": 0.017973
+   },
+   {
+    "vertical": "Family and relationships",
+    "audit_vertical": "Family and relationships",
+    "n": 15,
+    "weight": 0.0550865
+   },
+   {
+    "vertical": "Family and relationships",
+    "audit_vertical": "Unclear",
+    "n": 5,
+    "weight": 0.00623375
+   },
+   {
+    "vertical": "Film and TV",
+    "audit_vertical": "Anime and comics",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Film and TV",
+    "audit_vertical": "Film and TV",
+    "n": 30,
+    "weight": 0.114567
+   },
+   {
+    "vertical": "Film and TV",
+    "audit_vertical": "Knowledge and tech",
+    "n": 1,
+    "weight": 0.00675809
+   },
+   {
+    "vertical": "Film and TV",
+    "audit_vertical": "Unclear",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Food",
+    "audit_vertical": "Everyday life and travel",
+    "n": 1,
+    "weight": 0.00675809
+   },
+   {
+    "vertical": "Food",
+    "audit_vertical": "Film and TV",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Food",
+    "audit_vertical": "Food",
+    "n": 17,
+    "weight": 0.0557744
+   },
+   {
+    "vertical": "Gaming",
+    "audit_vertical": "Gaming",
+    "n": 21,
+    "weight": 0.097515
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "audit_vertical": "Arts and photography",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "audit_vertical": "Everyday life and travel",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "audit_vertical": "Gaming",
+    "n": 2,
+    "weight": 0.00777763
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "audit_vertical": "Knowledge and tech",
+    "n": 14,
+    "weight": 0.0462893
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "audit_vertical": "News and society",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "audit_vertical": "Other",
+    "n": 3,
+    "weight": 0.0034373
+   },
+   {
+    "vertical": "Music",
+    "audit_vertical": "Dance",
+    "n": 3,
+    "weight": 0.0101147
+   },
+   {
+    "vertical": "Music",
+    "audit_vertical": "Music",
+    "n": 10,
+    "weight": 0.0407748
+   },
+   {
+    "vertical": "News and society",
+    "audit_vertical": "Dance",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "News and society",
+    "audit_vertical": "News and society",
+    "n": 4,
+    "weight": 0.00754011
+   },
+   {
+    "vertical": "Other",
+    "audit_vertical": "Dance",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Other",
+    "audit_vertical": "Knowledge and tech",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Other",
+    "audit_vertical": "Other",
+    "n": 5,
+    "weight": 0.0177176
+   },
+   {
+    "vertical": "Other",
+    "audit_vertical": "Unclear",
+    "n": 1,
+    "weight": 0.00675809
+   },
+   {
+    "vertical": "Pets and animals",
+    "audit_vertical": "Pets and animals",
+    "n": 8,
+    "weight": 0.0186184
+   },
+   {
+    "vertical": "Short drama",
+    "audit_vertical": "Anime and comics",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Short drama",
+    "audit_vertical": "Comedy",
+    "n": 1,
+    "weight": 0.0023371
+   },
+   {
+    "vertical": "Short drama",
+    "audit_vertical": "Film and TV",
+    "n": 14,
+    "weight": 0.0280228
+   },
+   {
+    "vertical": "Short drama",
+    "audit_vertical": "Knowledge and tech",
+    "n": 1,
+    "weight": 0.00675809
+   },
+   {
+    "vertical": "Short drama",
+    "audit_vertical": "Short drama",
+    "n": 4,
+    "weight": 0.0180851
+   },
+   {
+    "vertical": "Short drama",
+    "audit_vertical": "Unclear",
+    "n": 1,
+    "weight": 0.00139823
+   },
+   {
+    "vertical": "Sports and fitness",
+    "audit_vertical": "Comedy",
+    "n": 1,
+    "weight": 0.00675809
+   },
+   {
+    "vertical": "Sports and fitness",
+    "audit_vertical": "Sports and fitness",
+    "n": 10,
+    "weight": 0.0439141
+   },
+   {
+    "vertical": "Unclear",
+    "audit_vertical": "Film and TV",
+    "n": 1,
+    "weight": 0.00101954
+   },
+   {
+    "vertical": "Unclear",
+    "audit_vertical": "Unclear",
+    "n": 9,
+    "weight": 0.0221677
+   }
+  ]
+ },
+ "propagation": {
+  "classes": [
+   "Film and TV",
+   "Short drama",
+   "Anime and comics",
+   "Gaming",
+   "Food",
+   "Sports and fitness",
+   "Comedy",
+   "Music",
+   "Dance",
+   "Celebrity and entertainment",
+   "Beauty, fashion and looks",
+   "Pets and animals",
+   "Family and relationships",
+   "Everyday life and travel",
+   "News and society",
+   "Knowledge and tech",
+   "Arts and photography",
+   "Smaller verticals"
+  ],
+  "min_videos_per_tier": 20,
+  "impressions": 459901,
+  "counts": [
+   {
+    "vertical": "Film and TV",
+    "llm_tail_videos": 163,
+    "llm_head_videos": 214,
+    "platform_tail_videos": 206,
+    "platform_head_videos": 308
+   },
+   {
+    "vertical": "Short drama",
+    "llm_tail_videos": 69,
+    "llm_head_videos": 100,
+    "platform_tail_videos": 25,
+    "platform_head_videos": 108
+   },
+   {
+    "vertical": "Anime and comics",
+    "llm_tail_videos": 140,
+    "llm_head_videos": 38,
+    "platform_tail_videos": 198,
+    "platform_head_videos": 77
+   },
+   {
+    "vertical": "Gaming",
+    "llm_tail_videos": 151,
+    "llm_head_videos": 97,
+    "platform_tail_videos": 158,
+    "platform_head_videos": 104
+   },
+   {
+    "vertical": "Food",
+    "llm_tail_videos": 109,
+    "llm_head_videos": 111,
+    "platform_tail_videos": 100,
+    "platform_head_videos": 101
+   },
+   {
+    "vertical": "Sports and fitness",
+    "llm_tail_videos": 91,
+    "llm_head_videos": 51,
+    "platform_tail_videos": 91,
+    "platform_head_videos": 52
+   },
+   {
+    "vertical": "Comedy",
+    "llm_tail_videos": 68,
+    "llm_head_videos": 166,
+    "platform_tail_videos": 35,
+    "platform_head_videos": 118
+   },
+   {
+    "vertical": "Music",
+    "llm_tail_videos": 79,
+    "llm_head_videos": 36,
+    "platform_tail_videos": 70,
+    "platform_head_videos": 40
+   },
+   {
+    "vertical": "Dance",
+    "llm_tail_videos": 70,
+    "llm_head_videos": 27,
+    "platform_tail_videos": 98,
+    "platform_head_videos": 23
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "llm_tail_videos": 44,
+    "llm_head_videos": 64,
+    "platform_tail_videos": 40,
+    "platform_head_videos": 71
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "llm_tail_videos": 63,
+    "llm_head_videos": 75,
+    "platform_tail_videos": 78,
+    "platform_head_videos": 106
+   },
+   {
+    "vertical": "Pets and animals",
+    "llm_tail_videos": 33,
+    "llm_head_videos": 59,
+    "platform_tail_videos": 26,
+    "platform_head_videos": 50
+   },
+   {
+    "vertical": "Family and relationships",
+    "llm_tail_videos": 58,
+    "llm_head_videos": 111,
+    "platform_tail_videos": 45,
+    "platform_head_videos": 43
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "llm_tail_videos": 75,
+    "llm_head_videos": 111,
+    "platform_tail_videos": 75,
+    "platform_head_videos": 82
+   },
+   {
+    "vertical": "News and society",
+    "llm_tail_videos": 31,
+    "llm_head_videos": 36,
+    "platform_tail_videos": 49,
+    "platform_head_videos": 59
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "llm_tail_videos": 128,
+    "llm_head_videos": 83,
+    "platform_tail_videos": 117,
+    "platform_head_videos": 76
+   },
+   {
+    "vertical": "Arts and photography",
+    "llm_tail_videos": 89,
+    "llm_head_videos": 42,
+    "platform_tail_videos": 92,
+    "platform_head_videos": 50
+   },
+   {
+    "vertical": "Smaller verticals",
+    "llm_tail_videos": 53,
+    "llm_head_videos": 68,
+    "platform_tail_videos": 11,
+    "platform_head_videos": 21
+   }
+  ],
+  "effects": [
+   {
+    "vertical": "Film and TV",
+    "labels": "Platform verticals",
+    "estimate": -0.372269,
+    "lo": -0.455284,
+    "hi": -0.295556
+   },
+   {
+    "vertical": "Short drama",
+    "labels": "Platform verticals",
+    "estimate": -0.495604,
+    "lo": -0.622537,
+    "hi": -0.34129
+   },
+   {
+    "vertical": "Anime and comics",
+    "labels": "Platform verticals",
+    "estimate": -0.436939,
+    "lo": -0.541348,
+    "hi": -0.308976
+   },
+   {
+    "vertical": "Gaming",
+    "labels": "Platform verticals",
+    "estimate": -0.438495,
+    "lo": -0.511476,
+    "hi": -0.350237
+   },
+   {
+    "vertical": "Food",
+    "labels": "Platform verticals",
+    "estimate": -0.384749,
+    "lo": -0.460759,
+    "hi": -0.286246
+   },
+   {
+    "vertical": "Sports and fitness",
+    "labels": "Platform verticals",
+    "estimate": -0.487243,
+    "lo": -0.595547,
+    "hi": -0.346719
+   },
+   {
+    "vertical": "Comedy",
+    "labels": "Platform verticals",
+    "estimate": -0.267633,
+    "lo": -0.406906,
+    "hi": -0.116611
+   },
+   {
+    "vertical": "Music",
+    "labels": "Platform verticals",
+    "estimate": -0.376539,
+    "lo": -0.510975,
+    "hi": -0.187783
+   },
+   {
+    "vertical": "Dance",
+    "labels": "Platform verticals",
+    "estimate": -0.39403,
+    "lo": -0.519197,
+    "hi": -0.197545
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "labels": "Platform verticals",
+    "estimate": -0.291175,
+    "lo": -0.441495,
+    "hi": -0.0737993
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "labels": "Platform verticals",
+    "estimate": -0.396542,
+    "lo": -0.499538,
+    "hi": -0.258046
+   },
+   {
+    "vertical": "Pets and animals",
+    "labels": "Platform verticals",
+    "estimate": -0.301712,
+    "lo": -0.457624,
+    "hi": -0.105805
+   },
+   {
+    "vertical": "Family and relationships",
+    "labels": "Platform verticals",
+    "estimate": -0.337346,
+    "lo": -0.492473,
+    "hi": -0.121193
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "labels": "Platform verticals",
+    "estimate": -0.445452,
+    "lo": -0.539354,
+    "hi": -0.33619
+   },
+   {
+    "vertical": "News and society",
+    "labels": "Platform verticals",
+    "estimate": -0.480783,
+    "lo": -0.594397,
+    "hi": -0.34933
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "labels": "Platform verticals",
+    "estimate": -0.497193,
+    "lo": -0.57749,
+    "hi": -0.400344
+   },
+   {
+    "vertical": "Arts and photography",
+    "labels": "Platform verticals",
+    "estimate": -0.445948,
+    "lo": -0.562959,
+    "hi": -0.298317
+   },
+   {
+    "vertical": "Film and TV",
+    "labels": "LLM verticals",
+    "estimate": -0.363893,
+    "lo": -0.457101,
+    "hi": -0.26017
+   },
+   {
+    "vertical": "Short drama",
+    "labels": "LLM verticals",
+    "estimate": -0.412851,
+    "lo": -0.526856,
+    "hi": -0.294398
+   },
+   {
+    "vertical": "Anime and comics",
+    "labels": "LLM verticals",
+    "estimate": -0.557201,
+    "lo": -0.65528,
+    "hi": -0.432255
+   },
+   {
+    "vertical": "Gaming",
+    "labels": "LLM verticals",
+    "estimate": -0.39521,
+    "lo": -0.477994,
+    "hi": -0.292027
+   },
+   {
+    "vertical": "Food",
+    "labels": "LLM verticals",
+    "estimate": -0.37404,
+    "lo": -0.451114,
+    "hi": -0.274312
+   },
+   {
+    "vertical": "Sports and fitness",
+    "labels": "LLM verticals",
+    "estimate": -0.492502,
+    "lo": -0.590902,
+    "hi": -0.358428
+   },
+   {
+    "vertical": "Comedy",
+    "labels": "LLM verticals",
+    "estimate": -0.336606,
+    "lo": -0.425819,
+    "hi": -0.206646
+   },
+   {
+    "vertical": "Music",
+    "labels": "LLM verticals",
+    "estimate": -0.389759,
+    "lo": -0.538931,
+    "hi": -0.204343
+   },
+   {
+    "vertical": "Dance",
+    "labels": "LLM verticals",
+    "estimate": -0.406608,
+    "lo": -0.513909,
+    "hi": -0.257039
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "labels": "LLM verticals",
+    "estimate": -0.483318,
+    "lo": -0.589081,
+    "hi": -0.349535
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "labels": "LLM verticals",
+    "estimate": -0.474033,
+    "lo": -0.575424,
+    "hi": -0.34409
+   },
+   {
+    "vertical": "Pets and animals",
+    "labels": "LLM verticals",
+    "estimate": -0.404393,
+    "lo": -0.511837,
+    "hi": -0.269744
+   },
+   {
+    "vertical": "Family and relationships",
+    "labels": "LLM verticals",
+    "estimate": -0.48666,
+    "lo": -0.595745,
+    "hi": -0.369723
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "labels": "LLM verticals",
+    "estimate": -0.397287,
+    "lo": -0.50915,
+    "hi": -0.278194
+   },
+   {
+    "vertical": "News and society",
+    "labels": "LLM verticals",
+    "estimate": -0.434592,
+    "lo": -0.588532,
+    "hi": -0.232012
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "labels": "LLM verticals",
+    "estimate": -0.533681,
+    "lo": -0.608988,
+    "hi": -0.443848
+   },
+   {
+    "vertical": "Arts and photography",
+    "labels": "LLM verticals",
+    "estimate": -0.469583,
+    "lo": -0.588587,
+    "hi": -0.293094
+   },
+   {
+    "vertical": "Film and TV",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.335242,
+    "lo": -0.43925,
+    "hi": -0.0185415
+   },
+   {
+    "vertical": "Short drama",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.315706,
+    "lo": -0.753825,
+    "hi": 1.95838
+   },
+   {
+    "vertical": "Anime and comics",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.516538,
+    "lo": -0.665655,
+    "hi": 0.724003
+   },
+   {
+    "vertical": "Gaming",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.393635,
+    "lo": -0.478105,
+    "hi": -0.272156
+   },
+   {
+    "vertical": "Food",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.380894,
+    "lo": -0.479462,
+    "hi": -0.261994
+   },
+   {
+    "vertical": "Sports and fitness",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.415138,
+    "lo": -0.582488,
+    "hi": 0.713044
+   },
+   {
+    "vertical": "Comedy",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.305092,
+    "lo": -0.420675,
+    "hi": 0.200872
+   },
+   {
+    "vertical": "Music",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.367169,
+    "lo": -0.583106,
+    "hi": 0.45468
+   },
+   {
+    "vertical": "Dance",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.388351,
+    "lo": -0.510076,
+    "hi": 0.172536
+   },
+   {
+    "vertical": "Celebrity and entertainment",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.489819,
+    "lo": -0.638408,
+    "hi": -0.293529
+   },
+   {
+    "vertical": "Beauty, fashion and looks",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.477082,
+    "lo": -0.612094,
+    "hi": -0.284128
+   },
+   {
+    "vertical": "Pets and animals",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.400779,
+    "lo": -0.515357,
+    "hi": -0.21862
+   },
+   {
+    "vertical": "Family and relationships",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.478012,
+    "lo": -0.618711,
+    "hi": -0.267064
+   },
+   {
+    "vertical": "Everyday life and travel",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.330426,
+    "lo": -0.505775,
+    "hi": 0.399585
+   },
+   {
+    "vertical": "News and society",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.419603,
+    "lo": -0.592767,
+    "hi": -0.0153531
+   },
+   {
+    "vertical": "Knowledge and tech",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.558212,
+    "lo": -0.72583,
+    "hi": -0.443621
+   },
+   {
+    "vertical": "Arts and photography",
+    "labels": "LLM verticals, corrected",
+    "estimate": -0.466166,
+    "lo": -0.601355,
+    "hi": -0.268172
+   }
+  ],
+  "decomposition": [
+   {
+    "labels": "Platform verticals",
+    "quantity": "raw_rel",
+    "estimate": -0.471767,
+    "lo": -0.498775,
+    "hi": -0.443111
+   },
+   {
+    "labels": "Platform verticals",
+    "quantity": "mix_rel",
+    "estimate": -0.0938901,
+    "lo": -0.118587,
+    "hi": -0.0685802
+   },
+   {
+    "labels": "Platform verticals",
+    "quantity": "within_rel",
+    "estimate": -0.377877,
+    "lo": -0.406092,
+    "hi": -0.345944
+   },
+   {
+    "labels": "Platform verticals",
+    "quantity": "mix_share_of_gap",
+    "estimate": 0.199018,
+    "lo": 0.147284,
+    "hi": 0.248022
+   },
+   {
+    "labels": "LLM verticals",
+    "quantity": "raw_rel",
+    "estimate": -0.471767,
+    "lo": -0.498775,
+    "hi": -0.443111
+   },
+   {
+    "labels": "LLM verticals",
+    "quantity": "mix_rel",
+    "estimate": -0.0589259,
+    "lo": -0.0837945,
+    "hi": -0.0345872
+   },
+   {
+    "labels": "LLM verticals",
+    "quantity": "within_rel",
+    "estimate": -0.412841,
+    "lo": -0.44559,
+    "hi": -0.3806
+   },
+   {
+    "labels": "LLM verticals",
+    "quantity": "mix_share_of_gap",
+    "estimate": 0.124905,
+    "lo": 0.0754974,
+    "hi": 0.174334
+   },
+   {
+    "labels": "LLM verticals, corrected",
+    "quantity": "raw_rel",
+    "estimate": -0.471767,
+    "lo": -0.498775,
+    "hi": -0.443111
+   },
+   {
+    "labels": "LLM verticals, corrected",
+    "quantity": "mix_rel",
+    "estimate": -0.0787077,
+    "lo": -0.122569,
+    "hi": -0.0276536
+   },
+   {
+    "labels": "LLM verticals, corrected",
+    "quantity": "within_rel",
+    "estimate": -0.393059,
+    "lo": -0.44405,
+    "hi": -0.347662
+   },
+   {
+    "labels": "LLM verticals, corrected",
+    "quantity": "mix_share_of_gap",
+    "estimate": 0.166836,
+    "lo": 0.0582917,
+    "hi": 0.25317
+   }
+  ],
+  "correction_draws": {
+   "accepted": 400,
+   "rejected": 707,
+   "replicates": 400,
+   "max_per_replicate": 100
+  }
+ }
+}

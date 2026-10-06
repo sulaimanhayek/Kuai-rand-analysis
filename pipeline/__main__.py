@@ -11,7 +11,7 @@ import argparse
 import pickle
 import time
 
-from pipeline import causal, db, export, segments, variants
+from pipeline import causal, db, export, segments, tags, variants
 from pipeline.config import CACHE_DIR, DB_PATH, EXPORT_DIR
 
 RESULTS = CACHE_DIR / "results.pkl"
@@ -36,13 +36,16 @@ def main() -> None:
         if args.rebuild or not DB_PATH.exists():
             with db.connect() as con:
                 step("01-03 build", db.build, con)
+        tag_table = tags.load()  # committed LLM tags (python -m pipeline.llm); the run needs no API key
         with db.connect(read_only=True) as con:
             data = step("load", causal.load, con)
             results = {
                 "overview": export.overview(con, data),
                 "causal": step("04 causal", causal.run, con, data),
                 "variants": step("04 variants", variants.run, data),
-                "segments": step("05 segments", segments.run, data),
+                "segments": step("05 segments", segments.run, data,
+                                 None if tag_table is None else tags.segment_columns(tag_table)),
+                "llm": None if tag_table is None else step("06 llm", tags.run, data, tag_table),
             }
         CACHE_DIR.mkdir(parents=True, exist_ok=True)
         RESULTS.write_bytes(pickle.dumps(results))

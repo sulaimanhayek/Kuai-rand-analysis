@@ -68,7 +68,7 @@ def overview(con: duckdb.DuckDBPyConnection, data: Data) -> dict:
 
 def files(r: dict) -> dict[str, tuple[object, int | None]]:
     """File name -> (content, indent). Compact files hold long arrays."""
-    c, v, s = r["causal"], r["variants"], r["segments"]
+    c, v, s, llm = r["causal"], r["variants"], r["segments"], r.get("llm")
     l1 = c["layer1"]
     headline = l1["main"].set_index("metric").loc[["mwt", "early_skip", "hated"]].reset_index()
     gems = v["hidden_gems"]
@@ -105,6 +105,7 @@ def files(r: dict) -> dict[str, tuple[object, int | None]]:
             "hidden_gems": {k: val for k, val in gems.items() if k != "videos"},
         }, 1),
         "hidden_gems_videos.json": (columns(gems["videos"], 4), None),
+        **({"llm.json": (llm, 1)} if llm else {}),
     }
 
 
